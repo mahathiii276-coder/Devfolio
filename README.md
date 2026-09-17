@@ -37,7 +37,7 @@ Once deployed, the live site will be available at:
 
 `https://<your-github-username>.github.io/<repository-name>/`
 
-_(Replace the placeholder above with your actual GitHub Pages URL after deployment.)_
+https://mahathiii276-coder.github.io/Devfolio/
 
 ## Customization
 
@@ -47,3 +47,9 @@ _(Replace the placeholder above with your actual GitHub Pages URL after deployme
 - Update the Email, GitHub, and LinkedIn links in the **Contact** footer.
 - Adjust colors and fonts by editing the CSS variables at the top of
   `style.css`.
+
+## Submission
+
+Repository: https://github.com/mahathiii276-coder/Devfolio
+
+Live Portfolio: https://mahathiii276-coder.github.io/Devfolio
