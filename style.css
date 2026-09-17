@@ -1,0 +1,222 @@
+/* ==========================================================
+   Mahathi's Portfolio Styles
+   ========================================================== */
+
+/* ---- Color & Font Variables ---- */
+:root {
+  --color-primary: #2563eb;   /* main accent color (blue) */
+  --color-dark: #1e293b;      /* headings & main text */
+  --color-light: #f7f8fa;     /* page background */
+  --color-white: #ffffff;     /* card / surface background */
+  --color-muted: #64748b;     /* secondary text */
+
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ---- Reset / Base Styles ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---- Header / Navigation (Flexbox) ---- */
+.site-header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: var(--color-dark);
+  font-weight: 500;
+  padding: 6px 4px;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ---- About Section ---- */
+.about-section {
+  padding: 64px 0;
+}
+
+.about-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+.tagline {
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+}
+
+.bio p {
+  max-width: 65ch;
+  color: var(--color-dark);
+}
+
+/* ---- Projects Section (CSS Grid) ---- */
+.projects-section {
+  padding: 64px 0;
+  background-color: var(--color-white);
+}
+
+.projects-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 32px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;   /* 1 column on mobile */
+  gap: 24px;
+}
+
+@media (min-width: 700px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  }
+}
+
+.project-card {
+  background-color: var(--color-light);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.project-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  color: var(--color-muted);
+  margin-bottom: 16px;
+}
+
+.project-card a {
+  font-weight: 500;
+}
+
+/* ---- Footer / Contact ---- */
+.site-footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 48px 0;
+}
+
+.site-footer h2 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+}
+
+.contact-label {
+  color: var(--color-muted);
+  margin-right: 6px;
+}
+
+.site-footer a {
+  color: #93c5fd;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---- Responsive Tweaks for Small Screens ---- */
+@media (max-width: 480px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .main-nav ul {
+    gap: 16px;
+  }
+
+  .about-section h1 {
+    font-size: 1.8rem;
+  }
+}
